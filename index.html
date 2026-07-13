@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal de Saúde dos Produtos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="logo">SP</div><div><h1>Portal de Saúde dos Produtos</h1><p>Acompanhamento de saúde, fases, riscos e ações dos produtos tecnológicos</p></div></div>
+    <div class="header-actions"><span class="pill">MVP Local</span><span class="date" id="dataAtualizacao"></span></div>
+  </header>
+  <main class="page">
+    <section class="hero"><div><h2>Visão executiva do portfólio</h2><p>Use filtros e busca para identificar produtos saudáveis, em atenção ou críticos.</p></div><div class="legend"><span><i class="dot green"></i>Saudável</span><span><i class="dot yellow"></i>Atenção</span><span><i class="dot red"></i>Crítico</span></div></section>
+    <section class="kpis"><article class="kpi-card"><small>Saúde média</small><strong id="kpiSaudeMedia">--%</strong><span>Portfólio avaliado</span></article><article class="kpi-card"><small>Produtos saudáveis</small><strong id="kpiVerdes">--</strong><span>Nota ≥ 85%</span></article><article class="kpi-card"><small>Em atenção</small><strong id="kpiAmarelos">--</strong><span>Nota 70% a 84%</span></article><article class="kpi-card"><small>Críticos</small><strong id="kpiVermelhos">--</strong><span>Nota &lt; 70%</span></article></section>
+    <section class="toolbar"><div class="filters"><button class="active" data-status="Todos">Todos</button><button data-status="Saudável">Saudáveis</button><button data-status="Atenção">Atenção</button><button data-status="Crítico">Críticos</button></div><input type="search" id="busca" placeholder="Buscar produto, família ou fase..." /></section>
+    <section class="content-grid"><aside class="panel"><h3>Fases do ciclo de vida</h3><div id="faseResumo" class="phase-list"></div></aside><section class="panel main-panel"><div class="section-title"><h3>Saúde dos produtos</h3><span id="contadorProdutos"></span></div><div id="produtosGrid" class="cards"></div></section></section>
+    <section class="panel actions-panel"><div class="section-title"><h3>Plano de ação prioritário</h3><span>Ações vinculadas aos produtos em atenção/críticos</span></div><div class="table-wrap"><table><thead><tr><th>Produto</th><th>Gap</th><th>Ação recomendada</th><th>Prioridade</th><th>Status</th></tr></thead><tbody id="acoesTabela"></tbody></table></div></section>
+  </main>
+  <footer>Protótipo local para avaliação de saúde de produtos. Dados demonstrativos editáveis no arquivo app.js.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
